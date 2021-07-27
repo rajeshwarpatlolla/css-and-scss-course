@@ -25,6 +25,11 @@ body {
     animation-timing-function: ease-out;
     /* animation-iteration-count: 3; */
     /* animation-delay: 1s; */
+
+    @include respond(xs) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -33,6 +38,10 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out;
+
+    @include respond(xs) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -46,6 +55,15 @@ body {
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
+
+  @include respond(sm) {
+    font-size: 3rem;
+  }
+  
+  @include respond(xs) {
+    font-size: 2.5rem;
+  }
+
   &:hover {
     transform: skewX(-15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);

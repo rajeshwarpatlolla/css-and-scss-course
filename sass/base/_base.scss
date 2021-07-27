@@ -9,6 +9,23 @@
 html {
   // this defines what 1rem is
   font-size: 62.5%;
+
+  // @include respond(xs) {
+  //   font-size: 50%; // 1 rem will be 8px in this width, 8/16 = 50%
+  // }
+
+  @include respond(md) {
+    font-size: 56.25%; // 1 rem = 9px, 9/16 = 56.25%
+  }
+
+  // placed after md, so that the min width devices will get priority over md
+  @include respond(sm) {
+    font-size: 50%; //  1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(lg) {
+    font-size: 75%; //  1rem = 12, 12/16 = 75%
+  }
 }
 
 body {
