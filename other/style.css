@@ -35,24 +35,31 @@
 .container {
   padding: 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .item {
   background-color: #d22141;
   border: 4px solid #fff;
   padding: 30px;
-  margin: 30px;
+  margin: 10px;
   color: #fff;
   font-size: 38px;
+  /* flex: 1; */
 }
 
 .item-2 {
   height: 200px;
+  flex-basis: 200px;
+  flex-shrink: 1;
 }
 
 .item-4 {
-  height: 400px;
+  align-self: flex-end;
+  order: 1;
+  /* flex: 1; */
 }
