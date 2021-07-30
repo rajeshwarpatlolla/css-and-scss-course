@@ -1,0 +1,58 @@
+/*
+
+---------------------   -->   container - main axis (left to right)
+|   |   |   |   |   |   -->   items - cross axis (top to bottom)
+---------------------
+
+  CONTAINER
+  -------------------
+  flex-direction: row | row-reverse | column | column-reverse;
+  flex-wrap: nowrap | wrap | wrap-reverse;
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+  align-items: stretch | flex-start | flex-end | center | baseline;
+  align-content: stretch | flex-start | flex-end | center | space-between | space-around;
+
+  ITEM
+  -------------------
+  align-self: auto | stretch | flex-start | flex-end | center | baseline;
+  order: 0 | <integer>;
+
+  flex-grow: 0 | <integer>;
+  flex-shrink: 1 | <integer>;
+  flex-basis: auto | <length>;
+
+  The above three can be grouped into single line css as below
+  flex: 0 1 auto;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ccc;
+}
+
+.container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  background-color: #d22141;
+  border: 4px solid #fff;
+  padding: 30px;
+  margin: 30px;
+  color: #fff;
+  font-size: 38px;
+}
+
+.item-2 {
+  height: 200px;
+}
+
+.item-4 {
+  height: 400px;
+}
